@@ -9,10 +9,25 @@ const collectEmployees = function() {
   let runEmp = true;
   //prompt user for first name, last name, and salary
   while(runEmp){
+
+    let fName = '';
+    while(!fName){
+      fName = prompt("Enter first Name: ")
+    }
+
+    let lName = '';
+    while(!lName){
+      lName = prompt("Enter last Name: ")
+    }
+
+    let sal = '';
+    while(!sal){
+      sal = parseInt(prompt("Enter Salary: "));
+    }
     const employee ={
-      firstName: prompt("Enter first Name: "),
-      lastName: prompt("Enter last Name: "),
-      salary: parseInt(prompt("Enter Salary: ")),
+      firstName: fName,
+      lastName: lName,
+      salary: sal,
     };
     employees.push(employee);
     runEmp = confirm("Do you want to add another Employee?");
